@@ -1,12 +1,16 @@
-require("dotenv").config();
-const mysql = require("mysql2");
+//require("dotenv").config();
+//const mysql = require("mysql2");
+
+import "dotenv/config";
+import mysql from "mysql2";
 
 const conexao = mysql.createConnection({
     host: process.env.DB_HOST || "localhost",
-    port: process.env.DB_HOST || 3306,
-    user: process.env.DB_HOST || "root",
-    password: process.env.DB_HOST || "root",
-    database: process.env.DB_HOST || "gamehub_db"
-});
+    port: Number(process.env.DB_PORT) || 3306,
+    user: process.env.DB_USER || "root",
+    password: process.env.DB_PASSWORD || "root",
+    database: process.env.DB_NAME || "mydatabase",
+})
 
-module.exports = conexao;
+//module.exports = conexao;
+export default conexao;
