@@ -8,9 +8,8 @@ import express from "express";
 import cors from "cors";
 import conexao from "./db.js";
 import { textoValido, inteiroPositivo } from "./src/utils/validacoes.js";
-import {validarId} from "./src/middlewares/validarId.js";
-import {tratarErro} from "./src/middlewares/tratarErro.js" 
-
+import validarId from "./src/middlewares/validarId.js";
+import tratarErro from "./src/middlewares/tratarErro.js";
 
 const app = express();
 const PORTA = Number(process.env.PORTA || 3000);
