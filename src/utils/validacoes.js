@@ -1,11 +1,12 @@
-export function textoValido(valor, limite) {
-    return typeof valor === "string"
-        && valor.trim().length > 0
-        && valor.trim().length <= limite;
+export function textoValido(texto, tamanhoMaximo) {
+    if (typeof texto !== "string") return false;
+    const textoLimpo = texto.trim();
+    if (textoLimpo.length === 0) return false;
+    if (tamanhoMaximo && textoLimpo.length > tamanhoMaximo) return false;
+    return true;
 }
 
 export function inteiroPositivo(valor) {
-    return typeof valor === "number"
-        && Number.isSafeInteger(valor)
-        && valor > 0;
+    const numero = Number(valor);
+    return Number.isInteger(numero) && numero > 0;
 }

@@ -1,19 +1,20 @@
 {
   "name": "aula-gamehub",
   "version": "1.0.0",
-  "description": "\"# GameHub\"",
+  "description": "# GameHub",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/felipepacheco-star/GameHub.git"
+    "url": "https://github.com/felipepacheco-star/GameHub.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/felipepacheco-star/GameHub/issues"
   },
